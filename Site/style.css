@@ -1,0 +1,438 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+h1, h2, h3 {
+    color: #222;
+}
+
+/* Menu de Navegação */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+nav .logo img {
+    width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Estilo do menu na página inicial */
+body.home nav {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do menu nas páginas internas */
+body.inner-page nav {
+    background: #007BFF;
+}
+
+/* Espaçamento para o conteúdo não ficar atrás do menu */
+body.home main {
+    margin-top: 0;
+}
+
+body.inner-page main {
+    margin-top: 80px; /* Altura do menu */
+}
+
+/* Banner Principal */
+.banner {
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 80px); /* Ajuste para considerar o menu */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Overlay escuro */
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.banner-texto h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.banner-texto p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.botao-banner {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.botao-banner:hover {
+    background-color: #218838;
+    transition: 0.3s;
+}
+
+/* Seção de Redes Sociais */
+.social-media {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.social-media h2 {
+    margin-bottom: 40px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Rodapé */
+footer {
+    background-color: #343a40;
+    color: #adb5bd;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+.footer-content a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* Botão Fixo do WhatsApp */
+.whatsapp-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-fixo img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Seção Quem Somos */
+.quem-somos {
+    padding: 80px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.quem-somos p {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+.equipe {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.membro {
+    margin: 20px;
+    text-align: center;
+}
+
+.membro img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.membro img:hover {
+    transform: scale(1.05);
+}
+
+.membro h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.membro p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Seção de Produtos */
+.produtos {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.produtos h1 {
+    margin-bottom: 60px;
+}
+
+.lista-produtos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.produto {
+    width: 250px;
+    margin: 20px;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.produto:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.produto h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.produto p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Seção de Contato */
+.contato {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contato h1 {
+    margin-bottom: 60px;
+    font-size: 2.5em;
+}
+
+.contato-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.formulario-contato, .informacoes-contato {
+    width: 500px;
+    margin: 20px;
+}
+
+.campo-form {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.campo-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo-form label i {
+    margin-right: 10px;
+    color: #007BFF;
+}
+
+.campo-form input, .campo-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.campo-form input:focus, .campo-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.formulario-contato button {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.formulario-contato button:hover {
+    background-color: #218838;
+    transition: 0.3s;
+}
+
+.informacoes-contato h2 {
+    margin-bottom: 30px;
+}
+
+.informacoes-contato p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.informacoes-contato p i {
+    margin-right: 10px;
+    color: #007BFF;
+}
+
+.mapa iframe {
+    border: 0;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .banner-texto h1 {
+        font-size: 2em;
+    }
+    .banner-texto p {
+        font-size: 1em;
+    }
+    .equipe {
+        flex-direction: column;
+    }
+    .lista-produtos {
+        flex-direction: column;
+    }
+    nav .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    nav li {
+        margin: 10px 0;
+    }
+    .banner {
+        height: 60vh;
+    }
+    .contato-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .formulario-contato, .informacoes-contato {
+        width: 100%;
+    }
+}
