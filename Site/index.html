@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sua Empresa - Início</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonte do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <script src="https://kit.fontawesome.com/SEU_KIT_ID.js" crossorigin="anonymous"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <!-- ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- Swiper.js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagens/favicon.png">
+</head>
+<body class="home">
+    <!-- Pré-carregador -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Menu de Navegação -->
+    <nav>
+        <div class="nav-container">
+            <a href="#inicio" class="logo">
+                <img src="imagens/logo.png" alt="Logo da Sua Empresa">
+            </a>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <!-- Ícone do menu responsivo -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção Início com efeito Parallax -->
+        <section id="inicio" class="banner">
+            <div class="banner-content">
+                <h1>Bem-vindo à Sua Empresa</h1>
+                <p>Oferecendo as melhores soluções em consultoria para o seu negócio.</p>
+                <a href="#produtos" class="botao-banner">Conheça nossos produtos</a>
+            </div>
+        </section>
+
+        <!-- Seção Quem Somos com animações GSAP -->
+        <section id="quem-somos" class="quem-somos">
+            <h1>Quem Somos</h1>
+            <p>Somos uma empresa especializada em consultoria empresarial, oferecendo soluções personalizadas para o crescimento e sucesso do seu negócio.</p>
+            <div class="equipe">
+                <!-- Membro 1 -->
+                <div class="membro">
+                    <img src="imagens/equipe1.jpg" alt="João Silva">
+                    <h3>João Silva</h3>
+                    <p>CEO & Fundador</p>
+                </div>
+                <!-- Membro 2 -->
+                <div class="membro">
+                    <img src="imagens/equipe2.jpg" alt="Maria Oliveira">
+                    <h3>Maria Oliveira</h3>
+                    <p>Diretora Financeira</p>
+                </div>
+                <!-- Membro 3 -->
+                <div class="membro">
+                    <img src="imagens/equipe3.jpg" alt="Carlos Souza">
+                    <h3>Carlos Souza</h3>
+                    <p>Gerente de Projetos</p>
+                </div>
+                <!-- Membro 4 -->
+                <div class="membro">
+                    <img src="imagens/equipe4.jpg" alt="Ana Pereira">
+                    <h3>Ana Pereira</h3>
+                    <p>Consultora Sênior</p>
+                </div>
+                <!-- Membro 5 -->
+                <div class="membro">
+                    <img src="imagens/equipe5.jpg" alt="Lucas Almeida">
+                    <h3>Lucas Almeida</h3>
+                    <p>Analista de Mercado</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Produtos com animações GSAP -->
+        <section id="produtos" class="produtos">
+            <h1>Nossos Produtos</h1>
+            <div class="lista-produtos">
+                <!-- Produto 1 -->
+                <div class="produto">
+                    <h2>Consultoria Estratégica</h2>
+                    <p>Auxiliamos na definição de estratégias para o crescimento sustentável da sua empresa.</p>
+                </div>
+                <!-- Produto 2 -->
+                <div class="produto">
+                    <h2>Consultoria Financeira</h2>
+                    <p>Orientação especializada para otimizar a gestão financeira do seu negócio.</p>
+                </div>
+                <!-- Produto 3 -->
+                <div class="produto">
+                    <h2>Consultoria em Marketing</h2>
+                    <p>Desenvolvemos estratégias de marketing eficientes para aumentar sua visibilidade.</p>
+                </div>
+                <!-- Produto 4 -->
+                <div class="produto">
+                    <h2>Consultoria em Recursos Humanos</h2>
+                    <p>Implementação de práticas eficazes de gestão de pessoas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Depoimentos com Swiper.js -->
+        <section id="depoimentos" class="depoimentos">
+            <h1>O que nossos clientes dizem</h1>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <blockquote>
+                            <p>"Excelente serviço e suporte excepcional. Recomendo a todos!"</p>
+                            <cite>— Cliente Satisfeito</cite>
+                        </blockquote>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <blockquote>
+                            <p>"A consultoria transformou nosso negócio. Resultados incríveis."</p>
+                            <cite>— Empresário de Sucesso</cite>
+                        </blockquote>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <blockquote>
+                            <p>"Equipe profissional e dedicada. Superou nossas expectativas."</p>
+                            <cite>— Gestor de Projetos</cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <!-- Setas de navegação -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <!-- Seção Contato aprimorada -->
+        <section id="contato" class="contato">
+            <h1>Entre em Contato</h1>
+            <div class="contato-container">
+                <div class="formulario-contato">
+                    <form id="formContato" action="https://formspree.io/f/SEU_FORM_ID" method="POST">
+                        <div class="campo-form">
+                            <input type="text" id="nome" name="nome" required>
+                            <label for="nome"><i class="fas fa-user"></i> Nome</label>
+                        </div>
+                        <div class="campo-form">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                        </div>
+                        <div class="campo-form">
+                            <input type="tel" id="telefone" name="telefone">
+                            <label for="telefone"><i class="fas fa-phone"></i> Telefone</label>
+                        </div>
+                        <div class="campo-form">
+                            <textarea id="mensagem" name="mensagem" required></textarea>
+                            <label for="mensagem"><i class="fas fa-comment-dots"></i> Mensagem</label>
+                        </div>
+                        <button type="submit"><span>Enviar Mensagem</span></button>
+                    </form>
+                </div>
+                <div class="informacoes-contato">
+                    <h2>Informações de Contato</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Rua Exemplo, 123 - São Paulo, SP</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(11) 4002-8922</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>contato@suaempresa.com</p>
+                    </div>
+                    <!-- Mapa Interativo Personalizado -->
+                    <div class="mapa" id="map"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Redes Sociais Melhorada -->
+        <section class="social-media">
+            <h2>Siga-nos nas redes sociais</h2>
+            <div class="social-icons">
+                <a href="#" class="social-icon" id="icon-facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" id="icon-instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" id="icon-twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" id="icon-linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <!-- Carrossel de Posts Sociais Simulados -->
+            <div class="social-feed">
+                <div class="swiper-container social-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="post">
+                                <img src="imagens/post1.jpg" alt="Post 1">
+                                <p>Confira nossas dicas de consultoria empresarial no blog!</p>
+                                <span>@suaempresa</span>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="post">
+                                <img src="imagens/post2.jpg" alt="Post 2">
+                                <p>Participamos do evento XYZ e foi um sucesso!</p>
+                                <span>@suaempresa</span>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="post">
+                                <img src="imagens/post3.jpg" alt="Post 3">
+                                <p>Nossa equipe está crescendo! Conheça os novos membros.</p>
+                                <span>@suaempresa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Paginação -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Sua Empresa. Todos os direitos reservados.</p>
+            <p>E-mail: contato@suaempresa.com | Telefone: (11) 4002-8922</p>
+            <p>Desenvolvedor: <a href="https://www.linkedin.com/in/lucas-castro-083201292/" target="_blank">Lucas Timponi Mercadante Castro</a></p>
+        </div>
+    </footer>
+
+    <!-- Botão Fixo do WhatsApp -->
+    <a href="https://wa.me/SEU_NUMERO_WHATSAPP" class="whatsapp-fixo" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <!-- Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- API do Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=SEU_API_KEY"></script>
+    <!-- Seu script personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
