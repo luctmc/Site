@@ -108,7 +108,7 @@ nav.scrolled {
 
 /* Banner Principal */
 .banner {
-    background: url('imagens/Banner.png') no-repeat center center/cover;
+    background: url('imagens/banner.png') no-repeat center center/cover;
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -126,6 +126,8 @@ nav.scrolled {
 
 .banner-content {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     top: 50%;
     left: 50%;
@@ -519,7 +521,6 @@ section p {
 }
 
 .whatsapp-fixo:hover img {
-
     transform: scale(1.1);
 }
 
@@ -547,6 +548,8 @@ footer {
 }
 
 /* Responsividade */
+
+/* Dispositivos médios (tablets) */
 @media (max-width: 992px) {
     .nav-container {
         padding: 10px;
@@ -560,11 +563,21 @@ footer {
         max-width: 400px;
     }
 
-    .formulario-contato, .informacoes-contato {
+    .formulario-contato,
+    .informacoes-contato {
         margin: 20px 0;
+    }
+
+    section h1 {
+        font-size: 2em;
+    }
+
+    section p {
+        font-size: 1.1em;
     }
 }
 
+/* Dispositivos pequenos (celulares) */
 @media (max-width: 768px) {
     .nav-container {
         flex-wrap: wrap;
@@ -595,6 +608,11 @@ footer {
         margin: 20px 0;
     }
 
+    .nav-links a {
+        color: #fff;
+        font-size: 1.5em;
+    }
+
     .banner {
         height: 80vh;
     }
@@ -613,6 +631,11 @@ footer {
         align-items: center;
     }
 
+    .produto {
+        width: 90%;
+        margin: 10px 0;
+    }
+
     .contato-container {
         flex-direction: column;
         align-items: center;
@@ -624,5 +647,67 @@ footer {
 
     .social-icon {
         margin: 10px;
+    }
+
+    .social-icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    section h1 {
+        font-size: 1.8em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}
+
+/* Dispositivos extra pequenos */
+@media (max-width: 576px) {
+    .nav-links a {
+        font-size: 1.2em;
+    }
+
+    .banner-content .logo-banner {
+        max-width: 250px;
+    }
+
+    .botao-banner {
+        padding: 10px 30px;
+        font-size: 1em;
+    }
+
+    .produto h2 {
+        font-size: 1.2em;
+    }
+
+    .produto p {
+        font-size: 0.9em;
+    }
+
+    .membro h3 {
+        font-size: 1em;
+    }
+
+    .membro p {
+        font-size: 0.9em;
+    }
+
+    .formulario-contato button {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .info-item p {
+        font-size: 1em;
+    }
+
+    .social-swiper .post p {
+        font-size: 1em;
+    }
+
+    .social-swiper .post span {
+        font-size: 0.9em;
     }
 }
