@@ -45,8 +45,8 @@ ul {
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
-    border: 10px solid #007BFF;
-    border-top: 10px solid #ffcc00;
+    border: 10px solid #1E88E5;
+    border-top: 10px solid #0D47A1;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -59,72 +59,51 @@ ul {
 
 /* Menu de Navegação */
 nav {
-    width: 100%;
     position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.7);
-    transition: background-color 0.3s;
+    background: transparent;
+    transition: background 0.3s;
 }
 
 nav.scrolled {
-    background: #007BFF;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 30px;
 }
 
-.nav-container .logo img {
-    width: 150px;
-    height: auto;
-}
-
-.nav-container ul {
+.nav-links {
     display: flex;
-    align-items: center;
+    list-style: none;
 }
 
-.nav-container li {
-    margin-left: 30px;
+.nav-links li {
+    margin-left: 20px;
 }
 
-.nav-container a {
+.nav-links a {
     color: #fff;
     font-weight: 500;
     font-size: 18px;
-    position: relative;
-    padding: 10px;
     transition: color 0.3s;
 }
 
-.nav-container a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #ffcc00;
-    transition: width 0.3s;
-    position: absolute;
-    left: 0;
-    bottom: 5px;
-}
-
-.nav-container a:hover::after {
-    width: 100%;
+.nav-links a:hover {
+    color: #1E88E5;
 }
 
 /* Ícone do menu responsivo */
 .menu-toggle {
     display: none;
-    cursor: pointer;
-    font-size: 1.5em;
     color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 /* Banner Principal */
@@ -147,6 +126,7 @@ nav.scrolled {
 
 .banner-content {
     position: absolute;
+    align-items: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -155,28 +135,26 @@ nav.scrolled {
     z-index: 2;
 }
 
-.banner-content h1 {
-    font-size: 4em;
-    margin-bottom: 20px;
-    font-weight: 700;
+.banner-content .logo-banner {
+    align-items: center;
+    display: flex;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
-.banner-content p {
-    font-size: 1.5em;
-    margin-bottom: 40px;
-}
-
+/* Botão do banner */
 .botao-banner {
     padding: 15px 40px;
-    background-color: #ffcc00;
-    color: #333;
+    background-color: #1E88E5;
+    color: #fff;
     font-size: 1.2em;
     border-radius: 50px;
     transition: background-color 0.3s;
 }
 
 .botao-banner:hover {
-    background-color: #e6b800;
+    background-color: #1565C0;
 }
 
 /* Seções Gerais */
@@ -188,7 +166,7 @@ section h1 {
     text-align: center;
     margin-bottom: 60px;
     font-size: 2.5em;
-    color: #222;
+    color: #1E88E5;
 }
 
 section p {
@@ -225,7 +203,7 @@ section p {
 
 .membro img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(30, 136, 229, 0.3);
 }
 
 .membro h3 {
@@ -254,15 +232,15 @@ section p {
     width: 250px;
     margin: 20px;
     padding: 30px;
-    background: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%);
     border-radius: 10px;
     text-align: center;
+    color: #fff;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .produto:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 25px rgba(30, 136, 229, 0.2);
 }
 
 .produto h2 {
@@ -273,7 +251,6 @@ section p {
 
 .produto p {
     font-size: 1em;
-    color: #555;
 }
 
 /* Seção Depoimentos */
@@ -286,7 +263,7 @@ section p {
     text-align: center;
     margin-bottom: 60px;
     font-size: 2.5em;
-    color: #222;
+    color: #1E88E5;
 }
 
 .swiper-container {
@@ -298,7 +275,7 @@ section p {
 .swiper-slide {
     background: #fff;
     padding: 40px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(30, 136, 229, 0.1);
     border-radius: 10px;
 }
 
@@ -313,44 +290,44 @@ section p {
     display: block;
     margin-top: 20px;
     font-style: normal;
-    color: #007BFF;
+    color: #1E88E5;
 }
 
 .swiper-button-next, .swiper-button-prev {
-    color: #007BFF;
+    color: #1E88E5;
 }
 
-/* Seção Contato Melhorada */
+/* Seção Contato aprimorada */
 .contato {
-    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
     padding: 80px 20px;
 }
 
 .contato h1 {
     margin-bottom: 60px;
     font-size: 2.5em;
-    color: #222;
+    color: #1E88E5;
 }
 
 .contato-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.formulario-contato, .informacoes-contato {
+.formulario-contato {
     flex: 1;
     min-width: 320px;
     margin: 20px;
 }
 
-.formulario-contato {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+.informacoes-contato {
+    flex: 1;
+    min-width: 320px;
+    margin: 20px;
 }
 
 .campo-form {
@@ -358,42 +335,36 @@ section p {
     margin-bottom: 30px;
 }
 
-.campo-form input, .campo-form textarea {
+.campo-form input,
+.campo-form textarea {
     width: 100%;
     padding: 15px 20px;
-    border: none;
-    border-bottom: 2px solid #ccc;
+    border: 2px solid #ccc;
+    border-radius: 5px;
     font-size: 1em;
     background: transparent;
     transition: border-color 0.3s;
 }
 
-.campo-form input:focus, .campo-form textarea:focus {
-    border-color: #007BFF;
+.campo-form input:focus,
+.campo-form textarea:focus {
+    border-color: #1E88E5;
     outline: none;
 }
 
 .campo-form label {
     position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    color: #aaa;
-    font-size: 1em;
-    pointer-events: none;
-    transition: top 0.3s, font-size 0.3s;
-}
-
-.campo-form input:focus + label, .campo-form input:not(:placeholder-shown) + label,
-.campo-form textarea:focus + label, .campo-form textarea:not(:placeholder-shown) + label {
-    top: 0;
-    font-size: 0.8em;
-    color: #007BFF;
+    top: -20px;
+    left: 15px;
+    background: #fff;
+    padding: 0 5px;
+    color: #1E88E5;
+    font-size: 0.9em;
 }
 
 .formulario-contato button {
     padding: 15px;
-    background-color: #007BFF;
+    background-color: #1E88E5;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -425,26 +396,14 @@ section p {
     left: 100%;
 }
 
-.informacoes-contato {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.informacoes-contato h2 {
-    margin-bottom: 30px;
-    font-size: 1.8em;
-}
-
 .info-item {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.info-item i {
-    font-size: 1.5em;
-    color: #007BFF;
+.info-item img {
+    width: 30px;
     margin-right: 15px;
 }
 
@@ -461,7 +420,7 @@ section p {
     overflow: hidden;
 }
 
-/* Seção de Redes Sociais Melhorada */
+/* Seção de Redes Sociais aprimorada */
 .social-media {
     background-color: #f9f9f9;
     color: #333;
@@ -472,7 +431,7 @@ section p {
 .social-media h2 {
     margin-bottom: 60px;
     font-size: 2.5em;
-    color: #222;
+    color: #1E88E5;
 }
 
 .social-icons {
@@ -484,20 +443,18 @@ section p {
 .social-icon {
     width: 70px;
     height: 70px;
-    margin: 0 20px;
-    background: linear-gradient(45deg, #007BFF, #00FFCC);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 2em;
-    transition: transform 0.5s;
-    perspective: 1000px;
+    margin: 0 15px;
+    transition: transform 0.3s;
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .social-icon:hover {
-    transform: rotateY(360deg);
+    transform: scale(1.1);
 }
 
 .social-feed {
@@ -513,7 +470,7 @@ section p {
 .social-swiper .post {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(30, 136, 229, 0.1);
     overflow: hidden;
     text-align: center;
     width: 100%;
@@ -528,14 +485,14 @@ section p {
 .social-swiper .post p {
     padding: 20px;
     font-size: 1.2em;
-    color: #555;
+    color: #333;
 }
 
 .social-swiper .post span {
     display: block;
     padding-bottom: 20px;
     font-size: 1em;
-    color: #007BFF;
+    color: #1E88E5;
 }
 
 /* Ajuste da paginação do Swiper */
@@ -544,7 +501,7 @@ section p {
 }
 
 .swiper-pagination-bullet {
-    background: #007BFF !important;
+    background: #1E88E5 !important;
 }
 
 /* Botão Fixo do WhatsApp */
@@ -553,16 +510,16 @@ section p {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    background-color: #25D366;
-    color: #fff;
-    font-size: 2em;
-    padding: 15px;
-    border-radius: 50%;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
-.whatsapp-fixo:hover {
-    background-color: #1DA851;
+.whatsapp-fixo img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s;
+}
+
+.whatsapp-fixo:hover img {
+
     transform: scale(1.1);
 }
 
@@ -595,20 +552,12 @@ footer {
         padding: 10px;
     }
 
-    .nav-container .logo img {
-        width: 120px;
+    .nav-links li {
+        margin-left: 15px;
     }
 
-    .nav-container ul li {
-        margin-left: 20px;
-    }
-
-    .banner-content h1 {
-        font-size: 3em;
-    }
-
-    .banner-content p {
-        font-size: 1.2em;
+    .banner-content .logo-banner {
+        max-width: 400px;
     }
 
     .formulario-contato, .informacoes-contato {
@@ -625,32 +574,33 @@ footer {
         display: block;
     }
 
-    .nav-container ul {
-        display: none;
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background: rgba(0, 0, 0, 0.9);
         flex-direction: column;
-        background: #007BFF;
-        width: 100%;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s;
     }
 
-    .nav-container ul.active {
-        display: flex;
+    .nav-links.active {
+        right: 0;
     }
 
-    .nav-container li {
-        margin: 15px 0;
-        text-align: center;
+    .nav-links li {
+        margin: 20px 0;
     }
 
     .banner {
         height: 80vh;
     }
 
-    .banner-content h1 {
-        font-size: 2.5em;
-    }
-
-    .banner-content p {
-        font-size: 1em;
+    .banner-content .logo-banner {
+        max-width: 300px;
     }
 
     .equipe {
@@ -663,19 +613,16 @@ footer {
         align-items: center;
     }
 
-    .social-icons {
+    .contato-container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
     }
 
     .social-icon {
-        margin: 10px 0;
-    }
-
-    .social-swiper .post {
-        max-width: 100%;
-    }
-
-    .contato-container {
-        flex-direction: column;
+        margin: 10px;
     }
 }
